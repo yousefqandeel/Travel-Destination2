@@ -1,14 +1,12 @@
-
+import Tour from "./tour/Tour.jsx";
+import React from "react";
 function Tours(props) {
     return (
         <>
             {
                 props.tours.map((data) => {
                     return (
-                        <div>
-                            <p>{data.name}</p>
-                            <img src={data.image} alt="" />
-                        </div>
+                        <Tour key={data} />
                     )
                 })
             }
